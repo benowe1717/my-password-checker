@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module requests_wrapper</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>requests_wrapper</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/benjamin/github/my-password-checker/src/classes/requests_wrapper.py">/home/benjamin/github/my-password-checker/src/classes/requests_wrapper.py</a></font></td></tr></table>
+    <p><tt><a href="#RequestsWrapper">RequestsWrapper</a>()&nbsp;class&nbsp;file</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="src.constants.constants.html">src.constants.constants</a><br>
+<a href="random.html">random</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+<a href="requests.html">requests</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="requests_wrapper.html#RequestsWrapper">RequestsWrapper</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RequestsWrapper">class <strong>RequestsWrapper</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#RequestsWrapper">RequestsWrapper</a>(url:&nbsp;str)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+A&nbsp;wrapper&nbsp;for&nbsp;the&nbsp;`requests`&nbsp;library&nbsp;to&nbsp;standardize&nbsp;handling&nbsp;connection<br>
+errors,&nbsp;timeout&nbsp;errors,&nbsp;and&nbsp;non-200&nbsp;return&nbsp;codes.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="RequestsWrapper-__init__"><strong>__init__</strong></a>(self, url: str) -&gt; None</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="RequestsWrapper-make_request"><strong>make_request</strong></a>(self, method='GET', params=None, json=None, auth=None) -&gt; bool</dt><dd><tt>Make&nbsp;a&nbsp;request&nbsp;using&nbsp;the&nbsp;requests&nbsp;library<br>
+&nbsp;<br>
+:param&nbsp;method:&nbsp;The&nbsp;HTTP&nbsp;Method&nbsp;to&nbsp;use&nbsp;for&nbsp;the&nbsp;request<br>
+:type&nbsp;method:&nbsp;str<br>
+:param&nbsp;params:&nbsp;A&nbsp;dictionary&nbsp;of&nbsp;URL&nbsp;parameters&nbsp;to&nbsp;use&nbsp;with<br>
+form-encoded&nbsp;requests<br>
+:type&nbsp;params:&nbsp;dict<br>
+:param&nbsp;json:&nbsp;A&nbsp;dictionary&nbsp;to&nbsp;be&nbsp;use&nbsp;with&nbsp;a&nbsp;POST&nbsp;body<br>
+:type&nbsp;json:&nbsp;dict<br>
+:param&nbsp;auth:&nbsp;A&nbsp;username&nbsp;and&nbsp;password&nbsp;for&nbsp;use&nbsp;with&nbsp;HTTPBasicAuth<br>
+:type&nbsp;auth:&nbsp;tuple<br>
+:return:&nbsp;True&nbsp;if&nbsp;the&nbsp;request&nbsp;completes&nbsp;(regardless&nbsp;of&nbsp;success),&nbsp;False<br>
+if&nbsp;the&nbsp;request&nbsp;cannot&nbsp;complete<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>url</strong></dt>
+<dd><tt>url.getter<br>
+&nbsp;<br>
+:return:&nbsp;The&nbsp;full&nbsp;URL<br>
+:rtype:&nbsp;str</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>RETRY_CODES</strong> = [429, 500, 502, 503, 504]</dl>
+
+<dl><dt><strong>TIMEOUT</strong> = 10</dl>
+
+<dl><dt><strong>URL_REGEX</strong> = '^https<font color="#c040c0">\\</font>:<font color="#c040c0">\\</font>/<font color="#c040c0">\\</font>/([<font color="#c040c0">\\</font>w+<font color="#c040c0">\\</font>-]+<font color="#c040c0">\\</font>.)+<font color="#c040c0">\\</font>w{2,}(<font color="#c040c0">\\</font>.<font color="#c040c0">\\</font>w{2,})?<font color="#c040c0">\\</font>/([<font color="#c040c0">\\</font>w<font color="#c040c0">\\</font>-<font color="#c040c0">\\</font>@]+<font color="#c040c0">\n</font>    (<font color="#c040c0">\\</font>.<font color="#c040c0">\\</font>w{3,}|<font color="#c040c0">\\</font>/))+[<font color="#c040c0">\\</font>w<font color="#c040c0">\\</font>-<font color="#c040c0">\\</font>@]+(<font color="#c040c0">\\</font>.<font color="#c040c0">\\</font>w{3,})?'</dl>
+
+<dl><dt><strong>USER_AGENT</strong> = 'Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0'</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
