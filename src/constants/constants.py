@@ -5,7 +5,7 @@
 ARGPARSE_PROGRAM_NAME = 'main.py'
 ARGPARSE_PROGRAM_DESCRIPTION = 'A program to check if the given password '
 ARGPARSE_PROGRAM_DESCRIPTION += 'is part of a known data breach.'
-ARGPARSE_VERSION = '0.0.1'
+ARGPARSE_VERSION = '1.0.0'
 ARGPARSE_AUTHOR = 'Benjamin Owen'
 ARGPARSE_REPO = 'https://github.com/benowe1717/password-checker'
 
