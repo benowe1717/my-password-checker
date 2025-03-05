@@ -5,6 +5,8 @@ Provide any number of passwords as command-line arguments to this program and it
 against the haveibeenpwned.com list of hashes. If the hash is found, you will be informed. If there is no output,
 your password is safe!
 
+![Quick GIF tutorial on using this program](https://github.com/benowe1717/my-password-checker/blob/write-docs/docs/usage.gif)
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
